@@ -13,19 +13,21 @@ namespace EmployeeWage
             int WagePerHour = 20;
             int FullDayHour = 8;
             int partTimeHour = 4;
-            if (number == 0)
+            switch (number)
             {
-                Console.WriteLine("Employee is Present and Worked Full-Time");
-                Console.WriteLine("Wage is: " + WagePerHour * FullDayHour);
-            }
-            else if (number == 1)
-            {
-                Console.WriteLine("Employee is Present and Worked Part-Time");
-                Console.WriteLine("Wage is: " + WagePerHour * partTimeHour);
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
+                case 0:
+                    Console.WriteLine("Employee is Present and Worked Full-Time");
+                    Console.WriteLine("Wage is: " + WagePerHour * FullDayHour);
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is Present and Worked Part-Time");
+                    Console.WriteLine("Wage is: " + WagePerHour * partTimeHour);
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is Absent");
+                    break;
+                default:
+                    break;
             }
             Console.ReadKey();
         }
