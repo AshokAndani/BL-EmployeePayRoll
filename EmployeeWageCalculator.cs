@@ -6,13 +6,22 @@ namespace EmployeeWage
 {
     public class EmployeeWageCalculator
     {
-        static int WagePerHour = 20;
-        static int FullDayHour = 8;
-        static int partTimeHour = 4;
-        static int workingDaysPerMonth = 20;
-        static int noOfDaysPresent = 20;
-       public int totalHours = 0;
-       public int totalDaysPresent = 0;
+        public int WagePerHour;
+        public int FullDayHour;
+        public int partTimeHour;
+        public int workingDaysPerMonth;
+        public int totalHours = 0;
+        public int totalDaysPresent = 0;
+        public int totalWage;
+        public string company;
+        public EmployeeWageCalculator(string company, int wagePerHour, int FullDayHour,int partTimeHour, int workingDaysPerMonth)
+        {
+            this.company = company;
+            this.WagePerHour = wagePerHour;
+            this.FullDayHour = FullDayHour;
+            this.partTimeHour = partTimeHour;
+            this.workingDaysPerMonth = workingDaysPerMonth;
+        }
         public int GetEmployeeWage()
         {
             int totalWage = 0;
@@ -43,6 +52,16 @@ namespace EmployeeWage
                 }
             }
             return totalWage;
+        }
+        public void PrintWageDetails()
+        {
+            int totalWage = this.GetEmployeeWage();
+            int totalPresentDays = this.totalDaysPresent;
+            int totalHours = this.totalHours;
+
+            Console.WriteLine("Number of Hours Employee worked: " + totalHours + " hrs");
+            Console.WriteLine("Number of Days Employee is Present: " + totalPresentDays + " Days");
+            Console.WriteLine("total wages for the month is: " + totalWage + "/-");
         }
     }
 }
