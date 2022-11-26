@@ -9,8 +9,10 @@ namespace EmployeeWage
         {
             Console.WriteLine("Welcome to Employee Wage Computation");
 
-            EmployeeWageCalculator wageCalculator = new EmployeeWageCalculator("Reliance",20,8,4,20);
-            wageCalculator.PrintWageDetails();
+            EmployeeWageCalculator reliance = new EmployeeWageCalculator("Reliance",20,8,4,20);
+            reliance.PrintWageDetails();
+            EmployeeWageCalculator airtel = new EmployeeWageCalculator("Airtel", 30, 7, 5, 30);
+            airtel.PrintWageDetails();
             Console.ReadKey();
         }
     }

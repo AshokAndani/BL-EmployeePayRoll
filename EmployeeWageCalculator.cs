@@ -58,8 +58,7 @@ namespace EmployeeWage
             int totalWage = this.GetEmployeeWage();
             int totalPresentDays = this.totalDaysPresent;
             int totalHours = this.totalHours;
-
-            Console.WriteLine("Number of Hours Employee worked: " + totalHours + " hrs");
+            Console.WriteLine("Number of Hours Employee worked for the company "+this.company+": " + totalHours + " hrs");
             Console.WriteLine("Number of Days Employee is Present: " + totalPresentDays + " Days");
             Console.WriteLine("total wages for the month is: " + totalWage + "/-");
         }
